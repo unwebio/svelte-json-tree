@@ -3,6 +3,10 @@
   "version": "0.1.1",
   "description": "Svelte JSON Viewer Component",
   "main": "dist/index.js",
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com"
+  },
   "svelte": "src/Root.svelte",
   "author": "Tan Li Hau <lhtan93@gmail.com>",
   "license": "MIT",
