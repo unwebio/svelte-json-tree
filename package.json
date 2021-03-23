@@ -4,6 +4,7 @@
   "description": "Svelte JSON Viewer Component",
   "main": "dist/index.js",
   "publishConfig": {
+    "cache": "~/.npm",
     "access": "restricted",
     "registry": "https://npm.pkg.github.com"
   },
