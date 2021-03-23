@@ -1,7 +1,7 @@
 <script>
   import JSONNested from './JSONNested.svelte';
 
-  export let key, value, isParentExpanded, isParentArray;
+  export let key, value, isParentExpanded, isParentArray, nodeType, valueGetter;
   export let expanded = false;
   const filteredKey = new Set(['length']);
 
@@ -22,7 +22,7 @@
   {keys}
   {previewKeys}
   {getValue}
-  label="Array({value.length})"
+  label="{nodeType}({value.length})"
   bracketOpen="["
   bracketClose="]"
 />

@@ -28,6 +28,9 @@
       case 'MapEntry':
         return JSONMapEntryNode;
       default:
+        if (nodeType !== 'Function' && value instanceof Object) {
+          return JSONObjectNode;
+        }
         return JSONValueNode;
     }
   }
@@ -57,6 +60,9 @@
       case 'Symbol':
         return raw => raw.toString();
       default:
+        if (value instanceof Object) {
+          return undefined;
+        }
         return () => `<${nodeType}>`;
     }
   }
